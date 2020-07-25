@@ -19,7 +19,7 @@ while bob != 1:
     bob = collatz(int(bob))
 '''    
 
-#OR
+# OR
 
 try:
     bob = input('Enter a number: ')
