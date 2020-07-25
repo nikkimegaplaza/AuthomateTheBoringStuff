@@ -1,0 +1,30 @@
+https://automatetheboringstuff.com/2e/chapter3/
+
+The Collatz Sequence
+
+
+
+def collatz(number):
+    if number % 2 == 0: #Even number
+        result = number / 2
+        print(result)
+        return result
+    else:               #Odd number
+        result = 3 * number + 1
+        print(result)
+        return result
+'''
+bob = input('Enter a number: ')
+while bob != 1:
+    bob = collatz(int(bob))
+'''    
+
+#OR
+
+try:
+    bob = input('Enter a number: ')
+    while bob != 1:
+        bob = collatz(int(bob))
+except ValueError:
+    print('Value Error: please enter an integer: ')
+
