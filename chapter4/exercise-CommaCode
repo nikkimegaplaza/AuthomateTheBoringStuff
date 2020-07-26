@@ -1,0 +1,42 @@
+https://automatetheboringstuff.com/2e/chapter4/
+
+1) # OUTPUT = apples bananas tofu cats
+def function(oldList):
+    newString = ' '
+   
+    '''
+    for i in oldList:
+        newString += i
+    return newString
+    '''
+    bob = newString.join(oldList)
+    return(bob)
+    
+spam = ['apples', 'bananas', 'tofu', 'cats']
+print(function(spam))
+
+
+
+2) #OUTPUT: apples, bananas, tofu and cats
+def sentence(x):
+    if len(x) == 1:
+        return x[0]
+    return (', '.join(x[:-1])+ ' and ' + x[-1])
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+print(sentence(spam))
+
+
+3)# OUTPUT = apples, bananas, tofu, and cats
+
+def list_thing(words):
+    if len(words) == 1:
+        return words[0]
+    return '{}, and {}'.format(', '.join(words[:-1]), words[-1])
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+print(list_thing(spam))
+
+ 
+
+
