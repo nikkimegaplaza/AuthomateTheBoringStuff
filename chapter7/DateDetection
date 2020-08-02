@@ -13,41 +13,37 @@ day = date.group(1)
 month = date.group(2)
 year = date.group(3)
 
-#if day > 31:
-
-if month <= str(12):
-    pass
-else:
+if month > str(12):
     print('the MM goes from 01-12. Enter a valid month')
-    return False
-    #month = input()
-elif month == '01' or '03' or '05' or '07' or '08' or '10' or '12':
+    month = input()
+if month == '01' or '03' or '05' or '07' or '08' or '10' or '12':
     #January,March,may,july,august,october,december
-        if day <= str(32):
+        if day <= str(31):
             pass
         else:
             print('this month only have 31 days. invalid DD entry')
-            return False
+            day = input()
 elif month == '04' or '06' or '09' or '11':
     #april,june,september,november
         if day <= str(30):
             pass
         else:
             print('this month only have 30 days. invalid DD entry')
-            return False
+            day = input()
 elif month == '02': #february
         if day >= str(29):
             print('this month only have 28 days. invalid DD entry')
-else:
-    break
+            day = input()
+  
 
- 
-    
 
 print('the date is: ' + date.group())
-
+'''
 print('the day is: ' + day)
 print('the month is: ' + month)
 print('the year is: ' + year)
-
+'''
+print('the day is: ' + day)
+print('the month is: ' + month)
+print('the year is: ' + year)
 
